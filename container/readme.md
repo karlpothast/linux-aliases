@@ -22,3 +22,9 @@ alias ll='printf "\nHost Name: "; cat /proc/sys/kernel/hostname; \
 alias g='git clone ';
 
 alias ch='chmod 777 -R ./';
+
+------------------------
+`docker exec -it <container-name> sh
+cd $HOME
+wget -O https://raw.githubusercontent.com/karlpothast/my-linux-aliases/master/container/.aliases
+source $HOME/.aliases`
