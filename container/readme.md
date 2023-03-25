@@ -16,8 +16,8 @@ alias ch='chmod 777 -R ./';
 
 > within the container
 
-`docker exec -it <container-name> sh  
-cd $HOME  
-wget -O https://raw.githubusercontent.com/karlpothast/my-linux-aliases/master/container/.aliases  
+`docker exec -it <container-name> sh  <br/>
+cd $HOME  <br/>
+wget -O https://raw.githubusercontent.com/karlpothast/my-linux-aliases/master/container/.aliases  <br/>
 source $HOME/.aliases  `
 
