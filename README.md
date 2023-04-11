@@ -1,5 +1,6 @@
-# workstation aliases
+# aliases for my workstations, containers and vms
 
+```
 alias aedit='nano $HOME/.aliases';
 alias aupd='source $HOME/.aliases';
 alias zupd='source $HOME/.zshrc';
@@ -31,7 +32,6 @@ alias sct='sudo systemctl stop';
 alias scu='sudo systemctl status';
 alias scr='sudo systemctl restart';
 alias google='_search(){ xdg-open "https://www.google.com/search?q=$1" > /dev/null &}; _search'; #open browser and google something
-
 
 #detailed directory info (requires exa)
 alias xl='printf "\nServer Name: "; cat /proc/sys/kernel/hostname; \
@@ -79,6 +79,7 @@ alias .c='dotnet clean';
 alias python='python3';
 alias pip='pip3';
 alias py='python3';
+```
 
 
 
