@@ -1,4 +1,4 @@
-# aliases for my workstations, containers and vms
+# aliases for dev workstations, containers and vms
 
 ```
 alias aedit='nano $HOME/.aliases';
