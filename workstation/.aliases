@@ -29,7 +29,7 @@ alias sct='sudo systemctl stop';
 alias scu='sudo systemctl status';
 alias scr='sudo systemctl restart';
 alias google='_search(){ xdg-open "https://www.google.com/search?q=$1" > /dev/null &}; _search'; #open browser and google something
-
+alias newscript='_newscript(){ scriptname="$1";echo -e "#\!/bin/bash\necho \"new\"" > ./$scriptname; chmod +x $scriptname; }; _newscript'; #new bash script
 
 #detailed directory info (requires exa)
 alias xl='printf "\nServer Name: "; cat /proc/sys/kernel/hostname; \
@@ -57,6 +57,7 @@ alias pac='sudo pacman -S --noconfirm ';
 alias pacu='sudo pacman -Syu';
 alias pacr='sudo pacman -R ';
 alias pacsearch='_pacsearch(){ sudo pacman -Ss "$1" -q | sort -g | less --header 1;}; _pacsearch';
+alias yaysearch='_yaysearch(){ yay -Ss "$1" -q | sort -g | less }; _yaysearch'; #aur search
 
 #rust
 alias cb="cargo build";
