@@ -31,9 +31,12 @@ alias scs='sudo systemctl start';
 alias sct='sudo systemctl stop';
 alias scu='sudo systemctl status';
 alias scr='sudo systemctl restart';
-alias google='_search(){ xdg-open "https://www.google.com/search?q=$1" > /dev/null &}; _search'; #open browser and google something
+alias goog='_search(){ xdg-open "https://www.google.com/search?q=$1" > /dev/null &}; _search'; #open browser and google something
+alias newscript='_newscript(){ scriptname="$1";echo -e "#\!/bin/bash\necho \"new\"" > ./$scriptname; chmod +x $scriptname; }; _newscript'; #new ready to execute bash script
+alias p='xsel --clipboard --output | pv -qL 500;';  #paste 
+alias todo='nano todo.list'; #open existing or create new todo list 
 
-#detailed directory info (requires exa)
+#detailed directory info with icons (requires exa)
 alias xl='printf "\nServer Name: "; cat /proc/sys/kernel/hostname; \
   lsb_release -ris ; \
   printf "User: ";whoami; \
@@ -47,8 +50,8 @@ alias github-login='gh auth login ';
 #docker
 alias d='docker ';
 alias de='docker exec -it ';
-alias ddr='sudo systemctl daemon-reload';
-alias dl='docker ps -a';
+alias ddr='sudo systemctl daemon-reload'; #reload docker daemon
+alias dl='docker ps -a'; #list all containers
 alias dstop='echo "docker stop $(docker ps -aq)"'; #stop all containers
 alias drmac='echo "docker rm $(docker ps -aq)"'; #remove all containers
 alias dsr="docker stop $(docker ps -a -q);docker rm $(docker ps -a -q);";
@@ -59,14 +62,15 @@ alias pac='sudo pacman -S --noconfirm ';
 alias pacu='sudo pacman -Syu';
 alias pacr='sudo pacman -R ';
 alias pacsearch='_pacsearch(){ sudo pacman -Ss "$1" -q | sort -g | less --header 1;}; _pacsearch';
+alias yaysearch='_yaysearch(){ yay -Ss "$1" -q | sort -g | less }; _yaysearch'; #aur search
+alias yay!='yay -S --noconfirm '; #install AUR package
+alias yayu='yay -Syu --noconfirm'; #update AUR packages
+alias pacyes='yay -Syu --noconfirm; sudo pacman -Syu --noconfirm'; #update pacman and AUR
 
 #rust
 alias cb="cargo build";
 alias cr='cargo run';
 alias cr1="RUST_BACKTRACE=1 cargo run";
-
-#start a dev web app in the background (requires npm live-server)
-alias dev="cd /path/to/web/app; npx live-server --port=<port> > /dev/null &;cd -;";
 
 #.net
 alias .d='dotnet';
@@ -74,11 +78,21 @@ alias .b='dotnet build';
 alias .r='dotnet run';
 alias .w='dotnet watch';
 alias .c='dotnet clean';
+alias Install-Package='dotnet add package';  #simulate nuget on windows
+alias .p='dotnet add package ';
 
 #python
 alias python='python3';
 alias pip='pip3';
 alias py='python3';
+
+#javascript
+alias webapp="npx live-server"; //launch a dev web server
+alias nr='npm run dev';
+alias ni='pnpm install';  #global npm install
+#start a dev web app in the background (requires npm live-server)
+alias dev="cd /path/to/web/app; npx live-server --port=<port> > /dev/null &;cd -;";
+
 ```
 
 
