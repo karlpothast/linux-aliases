@@ -69,9 +69,6 @@ alias cb="cargo build";
 alias cr='cargo run';
 alias cr1="RUST_BACKTRACE=1 cargo run";
 
-#start a dev web app in the background (requires npm live-server)
-alias dev="cd /path/to/web/app; npx live-server --port=<port> > /dev/null &;cd -;";
-
 #.net
 alias .d='dotnet';
 alias .b='dotnet build';
@@ -90,5 +87,7 @@ alias py='python3';
 alias webapp="npx live-server"; //launch a dev web server
 alias nr='npm run dev';
 alias ni='pnpm install';  #global npm install
+#start a dev web app in the background (requires npm live-server)
+alias dev="cd /path/to/web/app; npx live-server --port=<port> > /dev/null &;cd -;";
 
 
