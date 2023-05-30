@@ -28,8 +28,10 @@ alias scs='sudo systemctl start';
 alias sct='sudo systemctl stop';
 alias scu='sudo systemctl status';
 alias scr='sudo systemctl restart';
-alias google='_search(){ xdg-open "https://www.google.com/search?q=$1" > /dev/null &}; _search'; #open browser and google something
-alias newscript='_newscript(){ scriptname="$1";echo -e "#\!/bin/bash\necho \"new\"" > ./$scriptname; chmod +x $scriptname; }; _newscript'; #new bash script
+alias goog='_search(){ xdg-open "https://www.google.com/search?q=$1" > /dev/null &}; _search'; #open browser and google something
+alias newscript='_newscript(){ scriptname="$1";echo -e "#\!/bin/bash\necho \"new\"" > ./$scriptname; chmod +x $scriptname; }; _newscript'; #new ready to execute bash script
+alias p='xsel --clipboard --output | pv -qL 500;';  #paste 
+alias todo='nano todo.list'; #open existing or create new todo list 
 
 #detailed directory info (requires exa)
 alias xl='printf "\nServer Name: "; cat /proc/sys/kernel/hostname; \
@@ -56,8 +58,11 @@ alias drmai="docker rmi $(docker images -a -q)"; #remove all images
 alias pac='sudo pacman -S --noconfirm ';
 alias pacu='sudo pacman -Syu';
 alias pacr='sudo pacman -R ';
-alias pacsearch='_pacsearch(){ sudo pacman -Ss "$1" -q | sort -g | less --header 1;}; _pacsearch';
+alias pacsearch='_pacsearch(){ sudo pacman -Ss "$1" -q | sort -g | less --header 1;}; _pacsearch'; #pacman search
 alias yaysearch='_yaysearch(){ yay -Ss "$1" -q | sort -g | less }; _yaysearch'; #aur search
+alias yay!='yay -S --noconfirm '; #install AUR package
+alias yayu='yay -Syu --noconfirm'; #update AUR packages
+alias pacyes='yay -Syu --noconfirm; sudo pacman -Syu --noconfirm'; #update pacman and AUR
 
 #rust
 alias cb="cargo build";
@@ -73,9 +78,17 @@ alias .b='dotnet build';
 alias .r='dotnet run';
 alias .w='dotnet watch';
 alias .c='dotnet clean';
+alias Install-Package='dotnet add package';  #simulate nuget on windows
+alias .p='dotnet add package ';
 
 #python
 alias python='python3';
 alias pip='pip3';
 alias py='python3';
+
+#javascript
+alias webapp="npx live-server"; //launch a dev web server
+alias nr='npm run dev';
+alias ni='pnpm install';  #global npm install
+
 
