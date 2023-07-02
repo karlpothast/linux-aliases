@@ -34,7 +34,10 @@ alias scr='sudo systemctl restart';
 alias goog='_search(){ xdg-open "https://www.google.com/search?q=$1" > /dev/null &}; _search'; #open browser and google something
 alias newscript='_newscript(){ scriptname="$1";echo -e "#\!/bin/bash\necho \"new\"" > ./$scriptname; chmod +x $scriptname; }; _newscript'; #new ready to execute bash script
 alias p='xsel --clipboard --output | pv -qL 500;';  #paste 
-alias todo='nano todo.list'; #open existing or create new todo list 
+alias todo='nano todo.list'; #open existing or create new todo list
+alias r='cd /';
+alias rr='cd /; sudo -i'; #navigate to root directory as root
+alias services='systemctl --type=service --state=running'; #list running services
 
 #detailed directory info with icons (requires exa)
 alias xl='printf "\nServer Name: "; cat /proc/sys/kernel/hostname; \
