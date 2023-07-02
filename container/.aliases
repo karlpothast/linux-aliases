@@ -10,3 +10,5 @@ printf "Directory: ";pwd;
 ls -a; printf "\n";';
 alias g='git clone ';
 alias ch='chmod 777 -R ./';
+alias paths='echo $PATH | tr ":" "\n" ';
+
