@@ -45,6 +45,7 @@ alias xl='printf "\nServer Name: "; cat /proc/sys/kernel/hostname; \
 
 #github
 alias g='git clone ';
+alias gd='cd "$(\ls -1dt ./*/ | head -n 1)"; rm .git; rm .gitignore;'; # delete .github folder after cloning
 alias github-login='gh auth login ';
 
 #docker
