@@ -35,6 +35,7 @@ alias todo='nano todo.list'; #open existing or create new todo list
 alias r='cd /';
 alias rr='cd /; sudo -i'; #go to root directory as root user
 alias services='systemctl --type=service --state=running';
+alias osinfo='cat /etc/os-release'; #get os info
 
 #detailed directory info (requires exa)
 alias xl='printf "\nServer Name: "; cat /proc/sys/kernel/hostname; \
