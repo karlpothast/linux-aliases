@@ -13,6 +13,7 @@ alias ll='printf "\nHost Name: "; cat /proc/sys/kernel/hostname; \
    ls -a; printf "\n";';  
 alias g='git clone ';  
 alias ch='chmod 777 -R ./';  
+alias osinfo='cat /etc/os-release'; #get os info
 
 > within the container
 
