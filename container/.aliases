@@ -12,4 +12,4 @@ alias g='git clone ';
 alias ch='chmod 777 -R ./';
 alias paths='echo $PATH | tr ":" "\n" ';
 alias rm='sudo rm -r';
-
+alias osinfo='cat /etc/os-release'; #get os info
