@@ -1,6 +1,7 @@
 # aliases for dev workstations, containers and vms
 
 ```
+#general
 alias aedit='nano $HOME/.aliases';
 alias aupd='source $HOME/.aliases';
 alias zupd='source $HOME/.zshrc';
@@ -97,6 +98,14 @@ alias ni='pnpm install';  #global npm install
 #start a dev web app in the background (requires npm live-server)
 alias dev="cd /path/to/web/app; npx live-server --port=<port> > /dev/null &;cd -;";
 
+#nginx
+alias ng='cd /etc/nginx';
+alias ngweb='cd /var/www/html';
+alias ngstart='systemctl start nginx';
+alias ngstop='systemctl stop nginx';
+alias ngstatus='systemctl status nginx';
+alias ngtest='nginx -t';
+alias ngreload='sudo systemctl reload nginx'
 ```
 
 
