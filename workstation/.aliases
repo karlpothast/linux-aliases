@@ -88,6 +88,16 @@ alias python='python3';
 alias pip='pip3';
 alias py='python3';
 
+#nginx
+alias ng='cd /etc/nginx';
+alias ngweb='cd /var/www/html';
+alias ngstart='systemctl start nginx';
+alias ngstop='systemctl stop nginx';
+alias ngstatus='systemctl status nginx';
+alias ngtest='nginx -t';
+alias ngreload='sudo systemctl reload nginx'
+
+
 #javascript
 alias webapp="npx live-server"; //launch a dev web server
 alias nr='npm run dev';
