@@ -2,25 +2,25 @@
 
 ```
 #general
-alias aedit='nano $HOME/.aliases';
-alias aupd='source $HOME/.aliases';
-alias zupd='source $HOME/.zshrc';
-alias c='clear';
-alias e="echo";
+alias aedit='nano $HOME/.aliases';      #edit aliases
+alias aupd='source $HOME/.aliases';      #update/source aliases
+alias zupd='source $HOME/.zshrc';        #update/source .zsh settings
+alias c='clear';     
+alias e="echo";      
 alias n='nano';
-alias la='printf "\n";ls -a; printf "\n"';
-alias h='cd $HOME';
-alias b='cd ..';
-alias f="cd -";
-alias l='less --header 1';
-alias ports='sudo netstat -tulpn';
+alias la='printf "\n";ls -a; printf "\n"';  #list all files in a directory including hidden files
+alias h='cd $HOME';      # shortcut to home directory
+alias b='cd ..';        # move back one directory (move one level closer to root directory)
+alias f="cd -";        # move forward one directory (move to last directory)
+alias l='less --header 1';      # show terminal output on one screen with the header row always shown as you page through content)
+alias ports='sudo netstat -tulpn';   # list the ports in use on your workstation
 alias s='sudo';
-alias cfg='cd ~/.config';
-alias lo='cd $HOME/.local';
-alias hd='cd $HOME/Desktop';
-alias shortcut='sudo ln -s $(pwd) "$HOME/Desktop"';
+alias cfg='cd ~/.config';      # shortcut to config directory
+alias lo='cd $HOME/.local';      # shortcut to local direcory
+alias hd='cd $HOME/Desktop';      # shortcut to desktop 
+alias shortcut='sudo ln -s $(pwd) "$HOME/Desktop"';      # create a desktop to shortcut to the directory you are currently in 
 alias copywd='printf "$(pwd)" | xclip -sel clip';  #copy current working directory to clipboard (requires xclip)
-alias mkcd='_mkcd(){ mkdir "$1"; cd "$1";}; _mkcd'; #create directory and step into it
+alias mkcd='_mkcd(){ mkdir "$1"; cd "$1";}; _mkcd'; #create directory and step into it      
 alias largest-dirs="sudo du -scmh /* 2> >(grep -v 'cannot access') | sort -g";
 alias paths='echo $PATH | tr ":" "\n" ';
 alias allgroups='cat /etc/group | sort -g | less';
